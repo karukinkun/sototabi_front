@@ -1,0 +1,1 @@
+# sototabi_front
