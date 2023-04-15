@@ -1,0 +1,91 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "ignorePatterns": ["next.config.js", "postcss.config.js"],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": ["./tsconfig.json"]
+  },
+  "plugins": ["react", "@typescript-eslint", "unused-imports"],
+  "rules": {
+    "no-use-before-define": "off", //関数や変数が定義される前に使われているとエラーになるデフォルトの機能をoff
+    "@typescript-eslint/no-use-before-define": ["error"], //typescript側のno-use-before-defineを使うようにする
+    "import/prefer-default-export": "off", //named exportがエラーになるので使えるようにoff
+    "@typescript-eslint/no-unused-vars": "off", //unused-importsを使うため削除
+    "unused-imports/no-unused-imports": "error", //不要なimportの削除
+    "unused-imports/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "no-void": [
+      "error",
+      {
+        "allowAsStatement": true //void演算子の許可 ※この指定をしないとreportWebVitals.tsでエラーが出る
+      }
+    ],
+    "import/extensions": [
+      //importのときに以下の拡張子を記述しなくてもエラーにしない
+      "error",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "sort-imports": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal"],
+        "alphabetize": {
+          "order": "asc"
+        },
+        "newlines-between": "always"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      //jsx形式のファイル拡張子をjsxもしくはtsxに限定
+      "error",
+      {
+        "extensions": [".jsx", ".tsx"]
+      }
+    ],
+    "react/react-in-jsx-scope": "off", //import React from 'react'が無くてもエラーを無くす
+    "react/prop-types": "off" //TypeScriptでチェックしているから不要。offにする
+  }
+}

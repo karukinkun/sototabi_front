@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "naumovs.color-highlight",
+    "oderwat.indent-rainbow",
+    "esbenp.prettier-vscode",
+    "vscode-icons-team.vscode-icons",
+    "dbaeumer.vscode-eslint",
+    "donjayamanne.githistory",
+    "mhutchie.git-graph",
+    "wix.vscode-import-cost",
+    "visualstudioexptteam.vscodeintellicode",
+    "visualstudioexptteam.intellicode-api-usage-examples"
+  ]
+}
