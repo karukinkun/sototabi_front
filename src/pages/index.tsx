@@ -7,6 +7,7 @@ import TopContainer from '@/features/Top';
 
 const Top = () => {
   console.log(1);
+
   return <TopContainer />;
 };
 
