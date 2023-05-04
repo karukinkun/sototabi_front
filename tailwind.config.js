@@ -14,6 +14,10 @@ module.exports = {
         'top-image': "url('/top.jpg')",
         'footer-texture': "url('/img/footer-texture.png')",
       },
+      spacing: {
+        'content-width': 'var(--content-width)',
+        'content-side-width': 'var(--content-side-width)',
+      },
     },
   },
   plugins: [],

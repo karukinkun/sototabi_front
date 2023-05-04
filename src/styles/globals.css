@@ -6,6 +6,13 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --content-width: calc(100% - var(--content-side-width) * 2);
+  --content-side-width: 16px;
+
+  @media screen(md) {
+    --content-width: 960px;
+    --content-side-width: calc((100% - var(--content-width)) / 2);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
