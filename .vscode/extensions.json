@@ -10,6 +10,9 @@
     "mhutchie.git-graph",
     "wix.vscode-import-cost",
     "visualstudioexptteam.vscodeintellicode",
-    "visualstudioexptteam.intellicode-api-usage-examples"
+    "visualstudioexptteam.intellicode-api-usage-examples",
+    "formulahendry.auto-rename-tag",
+    "dsznajder.es7-react-js-snippets",
+    "aaron-bond.better-comments"
   ]
 }

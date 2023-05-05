@@ -1,10 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
-    './src/app/**/*.{js,ts,jsx,tsx}',
-    './src/features/**/*.{js,ts,jsx,tsx}',
+    // './src/pages/**/*.{js,ts,jsx,tsx}',
+    // './src/components/**/*.{js,ts,jsx,tsx}',
+    // './src/app/**/*.{js,ts,jsx,tsx}',
+    // './src/features/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -14,10 +16,20 @@ module.exports = {
         'top-image': "url('/top.jpg')",
         'footer-texture': "url('/img/footer-texture.png')",
       },
-      spacing: {
-        'content-width': 'var(--content-width)',
-        'content-side-width': 'var(--content-side-width)',
-      },
+    },
+    fontFamily: {
+      body: [
+        'YakuHanJPs',
+        'Hiragino Sans',
+        'ヒラギノ角ゴシック',
+        'YuGothic',
+        'Yu Gothic',
+        'メイリオ',
+        'Meiryo',
+        'MS Ｐゴシック',
+        'MS PGothic',
+        'sans-serif',
+      ],
     },
   },
   plugins: [],

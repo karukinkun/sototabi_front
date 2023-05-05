@@ -6,6 +6,10 @@ export default function Document() {
     <Html lang="ja">
       <Head>
         {/* Favicons, Google site verification and other common meta tags across the site. */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp_s.min.css"
+        />
       </Head>
       <body>
         <Main />

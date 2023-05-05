@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
-// eslint-disable-next-line react/function-component-definition
-export default function ScrollToTop() {
+const ScrollToTopButton: FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   // Top: 0 takes us all the way back to the top of the page
@@ -42,4 +41,5 @@ export default function ScrollToTop() {
       )}
     </div>
   );
-}
+};
+export default ScrollToTopButton;
