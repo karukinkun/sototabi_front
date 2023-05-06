@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { AnchorHTMLAttributes, DetailedHTMLProps, FC } from 'react';
 
 // export type ButtonProps = {
@@ -12,8 +13,8 @@ const Button: FC<DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTML
 }) => {
   console.log(2);
   return (
-    <a
-      href="#_"
+    <Link
+      href="/login"
       className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-indigo-100 border border-indigo-500 rounded-lg shadow-sm cursor-pointer hover:text-white bg-gradient-to-br from-purple-500 via-indigo-500 to-indigo-500"
     >
       <svg
@@ -31,7 +32,7 @@ const Button: FC<DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTML
         />
       </svg>
       <span className="relative pl-2">{props.children}</span>
-    </a>
+    </Link>
   );
 };
 
