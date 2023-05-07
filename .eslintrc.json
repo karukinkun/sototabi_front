@@ -86,6 +86,13 @@
       }
     ],
     "react/react-in-jsx-scope": "off", //import React from 'react'が無くてもエラーを無くす
-    "react/prop-types": "off" //TypeScriptでチェックしているから不要。offにする
+    "react/prop-types": "off", //TypeScriptでチェックしているから不要。offにする
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false //void型の返り値をチェックしない
+      }
+    ],
+    "react/jsx-props-no-spreading": "off"
   }
 }
