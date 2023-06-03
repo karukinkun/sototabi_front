@@ -17,6 +17,11 @@ module.exports = {
         'footer-texture': "url('/img/footer-texture.png')",
       },
     },
+    colors: {
+      primary: '#5c6ac4',
+      secondary: '#ecc94b',
+      white: '#ffffff',
+    },
     fontSize: {
       sm: '0.8rem',
       base: '1rem',

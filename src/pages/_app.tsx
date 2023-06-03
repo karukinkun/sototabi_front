@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-props-no-spreading */
+// eslint-disable-next-line import/extensions
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 

@@ -22,7 +22,7 @@ const Layout: FC<Props> = (props) => {
   const { children } = props;
   return (
     <div className="font-body">
-      <Header />
+      <Header userName="森内一輝 様" />
       <div className="flex flex-col min-h-screen text-gray-900">{children}</div>
       <ScrollToTopButton />
     </div>

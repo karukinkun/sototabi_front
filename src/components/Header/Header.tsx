@@ -15,27 +15,26 @@ Headerというコンポーネントをこのファイル内に作成する。
 ・ロゴ画像はnext/imageを使用する。
 */
 import { memo, FC } from 'react';
+import { useRecoilState } from 'recoil';
 
-import Button from '../Elements/Button';
+import { centerState } from '@/atoms/atom';
 
-const Header: FC = () => (
-  <header className="z-30 flex items-center h-14 md:h-14 w-full px-content-side-width">
-    <div className="flex justify-between w-full">
-      <div className="text-3xl font-black">Watch.ME</div>
-      <div className="flex items-center">
-        <div className="hidden text-lg md:flex items-center">
-          <a href="/" className="flex pr-6">
-            会員登録
-          </a>
-          <Button>ログイン</Button>
-        </div>
-        <button type="button" className="flex flex-col md:hidden">
-          <span className="w-6 h-1 mb-1 bg-gray-800 dark:bg-white" />
-          <span className="w-6 h-1 mb-1 bg-gray-800 dark:bg-white" />
-          <span className="w-6 h-1 mb-1 bg-gray-800 dark:bg-white" />
-        </button>
+interface Props {
+  userName: string;
+}
+
+const Header: FC<Props> = () => {
+  const [center, setCenter] = useRecoilState(centerState);
+
+  setCenter('aaa');
+
+  return (
+    <header className="z-30 w-full px-content-side-width">
+      <div className="text-2xl font-black text-center py-3">未るみる</div>
+      <div className="text-base font-bold py-2 bg-primary px-4">
+        <span className="text-white-400 text-white">{center}</span>
       </div>
-    </div>
-  </header>
-);
+    </header>
+  );
+};
 export default memo(Header);

@@ -1,4 +1,5 @@
 import { ReactNode, Suspense } from 'react';
+import { RecoilRoot } from 'recoil';
 
 type AppProviderPropsType = {
   children: ReactNode;
@@ -12,6 +13,6 @@ export const AppProvider = ({ children }: AppProviderPropsType) => (
       </div>
     }
   >
-    {children}
+    <RecoilRoot>{children}</RecoilRoot>
   </Suspense>
 );
